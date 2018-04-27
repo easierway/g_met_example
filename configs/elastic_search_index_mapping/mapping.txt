@@ -1,0 +1,14 @@
+PUT /g_met_example
+{
+ "mappings": {
+  "log": {
+   "properties": {
+	"HostAddr":{"type":"keyword"},
+    "timestamp":{"type":"date", "format":"epoch_second"},
+    "input_bytes": {"type":"integer"},
+    "output_bytes": {"type":"integer"}
+   }
+  }
+ }
+}
+
