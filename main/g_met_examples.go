@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"time"
 
-	. "github.com/chaocai2001/g_met"
+	. "github.com/mobvisita/g_met"
 )
 
 //The following example is to demonstrate how to use GMet.
