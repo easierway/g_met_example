@@ -25,7 +25,7 @@ func main() {
 	addr, _ := IpAddress()
 	for i := 0; i < 100; i++ {
 		gmet.Send(addr, Metric("input_bytes", strconv.Itoa(rand.Intn(100))),
-			Metric("output_bytes", strconv.Itoa(rand.Intn(100))), Metric("output_bytes", strconv.Itoa(rand.Intn(100))))
+			Metric("output_bytes", strconv.Itoa(rand.Intn(100))))
 
 		gmet.Flush() //in your real case, DON'T flush for each sending.
 		//For seelog writer, the auto-flushing can be set in the log configuration
