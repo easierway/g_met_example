@@ -22,9 +22,9 @@ func main() {
 	//	gmet := CreateGMetInstance(writer, &LtrFormatter{})
 
 	//Create a metric item of host IP, the name of the metric item is "HostAddr"
-	addr, _ := IpAddress()
+
 	for i := 0; i < 100; i++ {
-		gmet.Send(addr, Metric("input_bytes", strconv.Itoa(rand.Intn(100))),
+		gmet.Send(Metric("input_bytes", strconv.Itoa(rand.Intn(100))),
 			Metric("output_bytes", strconv.Itoa(rand.Intn(100))))
 
 		gmet.Flush() //in your real case, DON'T flush for each sending.
